@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="overlay" id="overlay">
+      <h3>Seaching now...</h3>
+    </div>
+
+    <div class="hero-bg">
+      <section class="top">
+        <header>
+          <a href="#">yummy.eats</a>
+        </header>
+
+        <h1><span>THE HEALTHY</span>Eating Experience</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam esse sint error vitae laborum ratione fuga minus maiores commodi. Natus.</p>
+
+        <div class="form-container">
+          <form action="">
+            <div class="form-left">
+              <label for="city">Enter your city:</label>
+              <input type="text" name="city" id="city">
+              <p>Example: "San Diego"</p>
+            </div>
+
+            <input type="button" id="cta-btn" value="Find Food Now">
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <section class="authentic">
+      <div class="right-col">
+        <h2>AUTHENTIC WHOLESOME.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, maiores reprehenderit explicabo ab ad illo eveniet enim velit, exercitationem et recusandae placeat? Maiores laboriosam libero dolore consectetur! Omnis, recusandae expedita!</p>
+      </div>
+
+      <img src="images/food.jpg">
+    </section>
+
+    <script>
+
+      let btn = document.querySelector('#cta-btn');
+      let overlay = document.querySelector('#overlay');
+
+      btn.addEventListener('click', () => {
+        overlay.style.display = 'grid';
+        overlay.classList.add('animate-overlay')
+        setTimeout(removeBlack, 3000);
+      });
+      // below this, let's remove the animate-overlay class(haven't done yet)
+      let removeBlack = function() {
+        overlay.classList.remove('animate-overlay')
+        overlay.style.display = 'none';
+      }
+
+      setTimeout(removeBlack, 3000);
+
+    </script>
+  </body>
+</html>
